@@ -2,13 +2,12 @@
 
 <p><a href="/places">Back to places</a></p>
 
-<h2>Entries</h2>
-
 <% if @entries.length > 0 %>
   <ul>
     <% for entry in @entries %>
       <li>
-        <strong><%= entry["title"] %></strong> - <%= entry["occurred_on"] %>
+        <strong><%= entry["title"] %></strong>
+        <p><em><%= entry["occurred_on"] %></em></p>
         <p><%= entry["description"] %></p>
       </li>
     <% end %>
