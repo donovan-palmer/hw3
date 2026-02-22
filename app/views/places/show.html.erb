@@ -1,0 +1,20 @@
+<h1><%= @place["name"] %></h1>
+
+<p><a href="/places">Back to places</a></p>
+
+<h2>Entries</h2>
+
+<% if @entries.length > 0 %>
+  <ul>
+    <% for entry in @entries %>
+      <li>
+        <strong><%= entry["title"] %></strong> - <%= entry["occurred_on"] %>
+        <p><%= entry["description"] %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No entries yet. Add one!</p>
+<% end %>
+
+<p><a href="/places/<%= @place["id"] %>/entries/new">Add a new entry</a></p>
